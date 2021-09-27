@@ -5,6 +5,7 @@ import Login from './Login'
 import NotFound from '../pages/NotFound'
 import Test from '../pages/Test'
 import ForgetPassword from './ForgetPassword'
+import UpdateProfile from './UpdateProfile'
 import { Container } from 'react-bootstrap'
 import { AuthProvider } from '../contexts/AuthContext'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
@@ -21,6 +22,10 @@ function App() {
           <AuthProvider>
             <Switch>
               <PrivateRoute exact path='/' component={Dashboard}></PrivateRoute>
+              <PrivateRoute
+                path='/update-profile'
+                component={UpdateProfile}
+              ></PrivateRoute>
               <Route path='/signup' component={Signup}></Route>
               <Route path='/login' component={Login}></Route>
 
