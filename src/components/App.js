@@ -4,6 +4,7 @@ import Dashboard from './Dashboard'
 import Login from './Login'
 import NotFound from '../pages/NotFound'
 import Test from '../pages/Test'
+import ForgetPassword from './ForgetPassword'
 import { Container } from 'react-bootstrap'
 import { AuthProvider } from '../contexts/AuthContext'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
@@ -24,6 +25,7 @@ function App() {
               <Route path='/login' component={Login}></Route>
 
               <Route path='/test/:id' component={Test} />
+              <Route path='/forget-password' component={ForgetPassword} />
               <Route path='*' component={NotFound} />
             </Switch>
           </AuthProvider>
