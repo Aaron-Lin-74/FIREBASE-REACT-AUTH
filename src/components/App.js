@@ -7,6 +7,7 @@ import Test from '../pages/Test'
 import { Container } from 'react-bootstrap'
 import { AuthProvider } from '../contexts/AuthContext'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import PrivateRoute from './PrivateRoute'
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <Route exact path='/' component={Dashboard}></Route>
+              <PrivateRoute exact path='/' component={Dashboard}></PrivateRoute>
               <Route path='/signup' component={Signup}></Route>
               <Route path='/login' component={Login}></Route>
 
